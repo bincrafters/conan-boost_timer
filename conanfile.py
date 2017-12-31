@@ -7,7 +7,7 @@ from conans import ConanFile, tools
 class BoostTimerConan(ConanFile):
     name = "boost_timer"
     version = "1.66.0"
-    url = "https://github.com/bincrafters/conan-boost-timer"
+    url = "https://github.com/bincrafters/conan-boost_timer"
  
     lib_short_names = ["timer"]
     is_header_only = False
