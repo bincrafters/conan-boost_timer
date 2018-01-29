@@ -8,7 +8,8 @@ class BoostTimerConan(ConanFile):
     name = "boost_timer"
     version = "1.66.0"
     url = "https://github.com/bincrafters/conan-boost_timer"
- 
+    author = "Bincrafters <bincrafters@gmail.com>"
+    exports = ["LICENSE.md"]
     lib_short_names = ["timer"]
     is_header_only = False
 
@@ -16,12 +17,12 @@ class BoostTimerConan(ConanFile):
     default_options = "shared=False"
 
     requires = (
-        "boost_package_tools/1.66.0@bincrafters/testing",
-        "boost_chrono/1.66.0@bincrafters/testing",
-        "boost_config/1.66.0@bincrafters/testing",
-        "boost_core/1.66.0@bincrafters/testing",
-        "boost_io/1.66.0@bincrafters/testing",
-        "boost_system/1.66.0@bincrafters/testing"
+        "boost_package_tools/1.66.0@bincrafters/stable",
+        "boost_chrono/1.66.0@bincrafters/stable",
+        "boost_config/1.66.0@bincrafters/stable",
+        "boost_core/1.66.0@bincrafters/stable",
+        "boost_io/1.66.0@bincrafters/stable",
+        "boost_system/1.66.0@bincrafters/stable"
     )
     
     # BEGIN
@@ -31,7 +32,7 @@ class BoostTimerConan(ConanFile):
     short_paths = True
     generators = "boost"
     settings = "os", "arch", "compiler", "build_type"
-    build_requires = "boost_generator/1.66.0@bincrafters/testing"
+    build_requires = "boost_generator/1.66.0@bincrafters/stable"
 
     def package_id(self):
         getattr(self, "package_id_additional", lambda:None)()
