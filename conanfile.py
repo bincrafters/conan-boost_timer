@@ -15,6 +15,11 @@ class BoostTimerConan(ConanFile):
     options = {"shared": [True, False]}
     default_options = "shared=False"
 
+    source_only_deps = [
+        "io",
+        "throw_exception"
+    ]
+
     requires = (
         "boost_chrono/1.67.0@bincrafters/testing",
         "boost_config/1.67.0@bincrafters/testing",
