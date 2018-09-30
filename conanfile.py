@@ -22,8 +22,9 @@ class BoostTimerConan(base.BoostBaseConan):
         "boost_core",
         "boost_system"
     ]
+    b2_build_requires = [
+        "boost_io"
+    ]
 
-    def build_requirements(self):
-        self.build_requires("boost_io")
 
 
