@@ -25,6 +25,3 @@ class BoostTimerConan(base.BoostBaseConan):
     b2_build_requires = [
         "boost_io"
     ]
-
-
-
