@@ -4,7 +4,7 @@
 from conans import python_requires
 
 
-base = python_requires("boost_base/1.67.0@bincrafters/testing")
+base = python_requires("boost_base/1.68.0@bincrafters/testing")
 
 class BoostTimerConan(base.BoostBaseConan):
     name = "boost_timer"
@@ -13,15 +13,13 @@ class BoostTimerConan(base.BoostBaseConan):
     options = {"shared": [True, False]}
     default_options = "shared=False"
     source_only_deps = [
+        "chrono",
         "io",
         "throw_exception"
     ]
     b2_requires = [
-        "boost_chrono",
         "boost_config",
         "boost_core",
         "boost_system"
     ]
-    b2_build_requires = [
-        "boost_io"
-    ]
+    b2_build_requires = ["boost_io"]
