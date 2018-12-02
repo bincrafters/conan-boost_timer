@@ -13,11 +13,11 @@ class BoostTimerConan(base.BoostBaseConan):
     options = {"shared": [True, False]}
     default_options = "shared=False"
     source_only_deps = [
-        "chrono",
         "io",
         "throw_exception"
     ]
     b2_requires = [
+        "boost_chrono",
         "boost_config",
         "boost_core",
         "boost_system"
