@@ -8,6 +8,7 @@ base = python_requires("boost_base/1.67.0@bincrafters/testing")
 
 class BoostTimerConan(base.BoostBaseConan):
     name = "boost_timer"
+    version = "1.67.0"
     url = "https://github.com/bincrafters/conan-boost_timer"
     lib_short_names = ["timer"]
     options = {"shared": [True, False]}
